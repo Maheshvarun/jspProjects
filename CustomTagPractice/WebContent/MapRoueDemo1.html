@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myMap() {
+	alert("hi");
+	 /* var start = new google.maps.LatLng(17.4401,78.3489);
+     var end = new google.maps.LatLng(17.4220,78.3389);
+      */
+     var directionsService = new google.maps.DirectionsService;
+     var directionsDisplay = new google.maps.DirectionsRenderer;
+ 
+     var mapOptions = {
+	      center: new google.maps.LatLng(17.4401,78.3489),
+	      zoom: 10,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    			};
+	     map = new google.maps.Map(document.getElementById("map"),mapOptions);
+	     
+	     /* var myMarker = {
+	    		 position:start,
+	    		 animation: google.maps.Animation.BOUNCE
+	     }
+	     var myMarker2 = {
+	    		 position:end,
+	    		 animation: google.maps.Animation.BOUNCE
+	     }
+	     marker = new google.maps.Marker(myMarker);
+	     marker.setMap(map);
+	     
+	     marker2 = new google.maps.Marker(myMarker2);
+	     marker2.setMap(map); 
+	      */
+	     //Direction 1
+	     directionsDisplay.setMap(map);
+	     
+	     calculateAndDisplayRoute(directionsService, directionsDisplay);
+	    // myFunction();
+           }
+function calculateAndDisplayRoute(directionsService, directionsDisplay) 
+{		
+	directionsService.route({
+ origin: "ameerpet",
+ destination: "uppal",
+ travelMode: 'DRIVING'
+}, function(response, status) {
+ if (status === 'OK') {
+   directionsDisplay.setDirections(response);
+  } else {
+    window.alert('Directions request failed due to ' + status);
+ }
+});
+	
+  }
+</script>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjVdX2brCinUre414ufP_d6L2ebtBdB9k&callback=myMap"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="map"></div>
+</body>
+</html>

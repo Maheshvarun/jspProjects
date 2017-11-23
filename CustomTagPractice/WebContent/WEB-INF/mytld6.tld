@@ -1,0 +1,17 @@
+<taglib version="1.2">
+   <tlib-version>1.2.3</tlib-version>
+   <tag>
+     <name>menu</name>
+     <tag-class>com.customtags.test.CoOperativeTagDemo1</tag-class>
+     <body-content>JSP</body-content>
+   </tag>
+   <tag>
+     <name>menuitems</name>
+     <tag-class>com.customtags.test.CoOperativeTagDemo2</tag-class>
+     <body-content>JSP</body-content>
+     <attribute>
+       <name>item</name>
+       <required>true</required>
+     </attribute>
+   </tag>
+</taglib>

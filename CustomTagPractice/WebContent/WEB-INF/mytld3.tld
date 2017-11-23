@@ -1,0 +1,12 @@
+<taglib version="1.2">
+   <tlib-version>1.2.3</tlib-version>
+   <tag>
+     <name>mytag</name>
+     <tag-class>com.customtags.test.TagSupportClassDemo</tag-class>
+     <attribute>
+         <name>count</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+     </attribute>
+   </tag>
+</taglib>
