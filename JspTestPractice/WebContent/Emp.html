@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+   function myfunction() 
+   {
+	  var a,b,c,d;
+	  a=document.getElementById("t1").value;  
+	     if(!(a<0) & !(a>300))
+		  {
+		  alert("Enter valid Number");
+		  }
+	     else
+		  {
+		  alert("Entered Correct");
+		  }
+   }
+</script>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>ENTER EMPLOYEE DETAILS</h2>
+<form action="/Jsps/set">
+<pre>
+EID:<input id="t1" type="text" name="empid" ><br>
+ENAME:<input id="t2" type="text" name="ename"><br>
+ESAL:<input id="t3" type="text" name="salary"><br>
+EADDR:<input id="t4" type="text" name="addr"><br>
+<button onclick="myfunction()">SUBMIT</button>
+</pre>
+</form>
+</body>
+</html>

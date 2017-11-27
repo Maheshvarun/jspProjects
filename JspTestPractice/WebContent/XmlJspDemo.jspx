@@ -1,0 +1,5 @@
+<jsp:root>
+<>
+<jsp:text>The hit count is:</jsp:text>
+
+</jsp:root>

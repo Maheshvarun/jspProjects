@@ -1,0 +1,9 @@
+<taglib version="2.3" > 
+    <tlib-version>1.2</tlib-version>
+  <!--   <uri>www.appstek.com</uri> -->
+    <function>
+    <name>doubleNumber</name>
+    <function-class>com.beans.test.RollerDice</function-class>
+    <function-signature>int doubleNumber(int)</function-signature>
+    </function>
+</taglib>
